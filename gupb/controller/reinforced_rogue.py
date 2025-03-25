@@ -14,12 +14,12 @@ POSSIBLE_ACTIONS = [
 
 # noinspection PyUnusedLocal
 # noinspection PyMethodMayBeStatic
-class ReinforcedRogue(controller.Controller):
+class ReinforcedRogueController(controller.Controller):
     def __init__(self, first_name: str):
         self.first_name: str = first_name
 
     def __eq__(self, other: object) -> bool:
-        if isinstance(other, ReinforcedRogue):
+        if isinstance(other, ReinforcedRogueController):
             return self.first_name == other.first_name
         return False
 
@@ -37,13 +37,13 @@ class ReinforcedRogue(controller.Controller):
 
     @property
     def name(self) -> str:
-        return f"ReinforcedRogue{self.first_name}"
+        return f"ReinforcedRogueController{self.first_name}"
 
     @property
     def preferred_tabard(self) -> characters.Tabard:
-        return characters.Tabard.WHITE
+        return characters.Tabard.REINFORCEDROGUE
 
 
 POTENTIAL_CONTROLLERS = [
-    ReinforcedRogue("Rogue"),
+    ReinforcedRogueController("Rogue"),
 ]
